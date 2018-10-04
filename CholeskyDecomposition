@@ -1,0 +1,233 @@
+%MA4003 Week 13 Cholesky /Jacobi
+
+Find the Cholesky decomposition ($A = LLT$
+) of the matrix 5
+\[
+A =
+\left(
+
+4 & −2 & 0 \\
+−2 &2 & 1 \\
+0 & 1 & 20\\
+
+\right)
+\]
+and hence solve the system of equations Ax = b where 3
+b =
+
+−2 \\
+0 \\
+−8 \\
+\right)
+\]
+
+\newpage
+
+\begin{itemize}
+\item a^2=1 \therefore a=1	
+\item ab=3 b=3
+\item ad=1 d=1	
+\item b^2+c^2=13 \therefore c^2=4 \thefore c=^2
+\item bd+ce=7	\therefore e=^2
+\item d^2+e^2+f^2=6		\therefore		f=1
+\end{itemize}
+
+	       
+%=======================================================================%
+
+
+MA4003                                          
+ Linear Algebra                            
+Cholesky Decomposition
+
+%=========================================%
+
+\begin{itemize}
+\item a,b,c,d,e,f are real number coefficients
+\end{itemize}
+
+\[ 
+L^T = 
+\begin{array}{c c c}
+a &  0 & 0 \\ 
+b & c & 0 \\ 
+d &  e & f \\ 
+\end{array}  
+\]
+
+ 
+
+\[ 
+L^T = 
+ 
+\begin{array}{c c c}
+a &  b & d \\ 
+0 & c & e \\ 
+0 &  0 & f \\ 
+\end{array}  
+
+\]
+
+%=============================================================% 
+
+A = L \times L^T  
+
+
+ \[ 
+L^T = 
+\begin{array}{c c c}
+a &  0 & 0 \\ 
+b & c & 0 \\ 
+d &  e & f \\ 
+\end{array}  
+ 
+\begin{array}{c c c}
+a &  b & d \\ 
+0 & c & e \\ 
+0 &  0 & f \\ 
+\end{array}  
+
+= 
+
+\begin{array}{c c c}
+a^2 &  ab & ad \\ 
+0 & b^2+c^2 & e \\ 
+0 &  0 & d^2 +e^2 + f^2 \\ 
+\end{array}  
+\]
+
+%=============================================================% 
+
+ 
+
+A Input matrix:
+
+
+ 1.000 -2.000  1.000
+
+-2.000 20.000 -2.000
+
+ 1.000 -2.000 10.000
+
+
+Cholesky Decomposition:
+
+
+L:
+
+ 1.000  0.000  0.000
+
+-2.000  4.000  0.000
+
+ 1.000  0.000  3.000
+
+
+Solution A*X=B
+
+
+ 2.000
+
+ 1.000
+
+-1.000
+
+
+
+ 0.000  1.000  0.000
+
+ 0.000  0.000  1.000
+
+ 0.000  2.000 -1.000
+
+
+Eigenvalues Eigenvectors:
+
+
+Eigenvalues:
+
+( 0.000, 0.000i)
+
+( 1.000, 0.000i)
+
+(-2.000, 0.000i)
+
+
+Eigenvectors:
+
+( 1.000, 0.000i) ( 0.577, 0.000i) ( 0.218, 0.000i)
+
+( 0.000, 0.000i) ( 0.577, 0.000i) (-0.436, 0.000i)
+
+( 0.000, 0.000i) ( 0.577, 0.000i) ( 0.873, 0.000i)
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+Cholesky Decomposition
+
+
+
+
+
+
+
+
+  
+
+
+
+
+--------------------------------------------------------------------------------
+Jacobi Method
+
+
+
+
+
+
+D = I =D-1
+
+
+This is the Identity matrix I  However, this is not always the case.
+
+
+Use three iterations of this method , with initial guess {0,0,0} to obtain a numerical solution to the system.
+
+  
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+  
+
