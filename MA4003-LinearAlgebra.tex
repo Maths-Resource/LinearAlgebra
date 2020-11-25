@@ -1,0 +1,139 @@
+
+
+Question 4 Part A : Bases
+Question 4 Part B : Linear Independence
+Question 4 Row Space and Column Space
+Question 5 : Gram Scmidt Process : Projection Operator
+Question 5 part B : Least Squares Approximation
+ 
+ 
+System of Linear Equations
+A system of linear equations can be written in matrix form: Ax=b
+ 
+A is typically an  nn matrix of coefficients
+ 
+x is a n1 column of unknown variables , which the system seeks to find solutions for.
+ 
+b is typically an  n1 matrix of "solution" coefficients
+ 
+The system can expressed in terms of its transposr
+ 
+xtAt=bt(Ax)t=(b)t
+ 
+The system is only solvable if Det(A) 0
+Question 4 Part A : Bases
+In linear algebra, a basis is a set of vectors in a given vector space with certain properties:
+
+ 
+One can get any vector in the vector space by multiplying each of the basis vectors by different numbers, and then adding them up. 
+If any vector is removed from the basis, the property above is no longer satisfied. 
+ 
+
+ 
+The dimension of a given vector space is the number of elements of the basis.
+ 
+ 
+All quadratic expressions (i.e.px2+ qx+r ) can be written as linear combination of those terms.
+ 
+i.e. For any given set of values{p,q,r} there exists some coefficients {a,b,c} such that
+ 
+px2+ qx+r = a(1-2x) + b(2 +x2) +c(4x+x2)
+ 
+ 
+1) We can write the above equation in matrix form
+ 
+            
+ 
+        px2+ qx+r = 
+ 
+ 
+ = 
+ 
+  
+2) simplifying
+arraycp & q & rarray = 
+ 
+ 
+3) This is a system of linear equations. ( in form xtAt=bt, as opposed to Ax=b )  
+ 
+ 
+This system is only solvable if  is invertible
+ 
+i.e.det(C) 0
+ 
+4) Lets check it.
+ 
+Using the first column
+  
+det(C) = 1(01) -1(41) - 2(-21) -1(40) + 0
+ 
+ 
+det(C) = -4 +4 +0 = 0
+ 
+ 
+Determinant is zero!
+ 
+The system of equations is not solvable.
+ 
+{(1-2x),(2 +x2),(4x+x2)} is not a basis in R2
+ 
+ 
+ 
+Question 4 Part B : Linear Independence
+Determine whether the following set of vectors in R4 is linearly independent.
+ 
+     
+ 
+If one column can be expressed as a linear combination of the other columns, then they are not linearly independent
+ 
+We will use an inspection based approach and then by computing the determinant of the aggregation.
+ 
+ 
+Inspection 
+ 
+Consider the last column v4. We are going to see if it can be expressed as a linear combination of the other columns.
+ 
+If it can, we can compute {a,b,c }, where v4=av1+bv2+cv3
+ 
+Necessarily a must equal 3.
+ 
+Let us compute the difference v4-av1=v4-3v1
+ 
+      = 
+ 
+This difference is equivalent 3v2
+ 
+ 
+Necessarily the last column vector is a linear combination of the other vectors v4=3v1+3v2 
+ 
+Formal approach
+ 
+Choose one of the columns ( we pick v4 )
+ 
+Try to find {a,b,c }, where v4=av1+bv2+cv3
+If we cant solve this - then they are linearly independent.
+ 
+ 
+      = 
+ 
+Cell 1 : a=3
+ 
+Cell 4: -3=-a+c	c=0
+ 
+Do we get consistent solutions from cells 2 and 3
+Cell 2 :0=2a-2b	a=b	b=3
+ 
+Cell 3 : -3=a-2b  b=3  
+ 
+ 
+Necessarily the last column vector is a linear combination of the other vectors 
+ 
+v4=3v1+3v2+0v3 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
